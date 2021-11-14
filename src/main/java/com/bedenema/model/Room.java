@@ -4,6 +4,9 @@ public class Room {
     private int id, numberSeat, numberSweetBox;
     private String monitorInfo;
 
+    public Room(){
+
+    }
     public Room(int id, int numberSeat, int numberSweetBox, String monitorInfo) {
         this.id = id;
         this.numberSeat = numberSeat;

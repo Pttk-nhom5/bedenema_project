@@ -4,6 +4,9 @@ public class Seat {
     private int id, row, column, type;
     private Room room;
 
+    public Seat(){
+
+    }
     public Seat(int id, int row, int column, int type, Room room) {
         this.id = id;
         this.row = row;

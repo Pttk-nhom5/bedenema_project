@@ -6,6 +6,9 @@ public class Combo {
     private String name;
     private Food[] foods;
 
+    public Combo(){
+
+    }
     public Combo(int id, double price, String name, Food[] foods) {
         this.id = id;
         this.price = price;

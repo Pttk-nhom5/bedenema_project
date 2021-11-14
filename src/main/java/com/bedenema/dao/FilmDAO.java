@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 public class FilmDAO {
 
+    public FilmDAO(){
+
+    }
     public static Film getFIlm(int id){
         Film f = new Film();
         return f;

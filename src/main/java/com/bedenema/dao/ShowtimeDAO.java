@@ -6,6 +6,9 @@ import java.util.ArrayList;
 
 public class ShowtimeDAO {
 
+    public ShowtimeDAO(){
+
+    }
     public static ArrayList<Showtime> getShowTimeList(){
         ArrayList<Showtime> arr = new ArrayList<>();
 

@@ -6,6 +6,9 @@ public class Ticket {
     private Seat seat;
     private double price;
 
+    public Ticket(){
+
+    }
     public Ticket(int id, Showtime showtime, Seat seat, double price) {
         this.id = id;
         this.showtime = showtime;

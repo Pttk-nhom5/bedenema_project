@@ -5,6 +5,9 @@ public class Food {
     private String name, unit;
     private double price;
 
+    public Food(){
+
+    }
     public Food(int id, int type, String name, String unit, double price) {
         this.id = id;
         this.type = type;

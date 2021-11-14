@@ -12,6 +12,9 @@ public class Bill {
     private UsedCombo[] usedCombos;
     private UsedFood[] usedFoods;
 
+    public Bill(){
+
+    }
     public Bill(int id, int paymentType, Client client, User user, double price, LocalDateTime paymentDate, Ticket[] tickets, UsedCombo[] usedCombos, UsedFood[] usedFoods) {
         this.id = id;
         this.paymentType = paymentType;
