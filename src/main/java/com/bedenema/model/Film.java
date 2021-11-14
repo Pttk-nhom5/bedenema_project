@@ -8,6 +8,9 @@ public class Film {
     private LocalDateTime releaseDate;
     private boolean isShowing;
 
+    public Film(){
+
+    }
     public Film(int id, int duration, String name, String director, String country, String category, String poster, LocalDateTime releaseDate, boolean isShowing) {
         this.id = id;
         this.duration = duration;

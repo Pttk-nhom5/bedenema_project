@@ -10,6 +10,10 @@ public class Showtime {
     private Film film;
     private LocalDateTime startTime, endTime;
 
+    public Showtime(){
+
+    }
+
     public Showtime(int id, Room room, Film film, LocalDateTime startTime, LocalDateTime endTime) {
         this.id = id;
         this.room = room;

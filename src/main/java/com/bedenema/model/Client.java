@@ -8,6 +8,9 @@ public class Client {
     private LocalDateTime birthday;
     private boolean isMember;
 
+    public Client(){
+
+    }
     public Client(int id, int point, String fullName, String phone, String personalId, String gender, String email, String password, String address, LocalDateTime birthday, boolean isMember) {
         this.id = id;
         this.point = point;
