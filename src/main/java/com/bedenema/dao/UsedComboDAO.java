@@ -11,12 +11,12 @@ public class UsedComboDAO {
 
     }
 
-    public static ArrayList<UsedCombo> getUsedComboList(int billID){
+    public  ArrayList<UsedCombo> getUsedComboList(int billID){
         ArrayList<UsedCombo> arr =new ArrayList<UsedCombo>();
         return arr;
     }
 
-    public static void newUsedCombo(Combo c, int amount){
+    public void newUsedCombo(Combo c, int amount){
 
     }
 }

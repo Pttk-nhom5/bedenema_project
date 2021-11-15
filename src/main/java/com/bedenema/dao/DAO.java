@@ -4,13 +4,17 @@ import java.sql.*;
 
 public class DAO<conn> {
 
-    private String jdbcUrl = "jdbc:mariadb://localhost:3306/bedenema_db";
-    private    String username = "root";
-    private    String password ="";
-    private Connection conn;
+    String jdbcUrl = "jdbc:mariadb://localhost:3306/bedenema_db";
+    String username = "root";
+    String password ="";
+    Connection conn;
 
-    public DAO() throws SQLException {
-        conn = DriverManager.getConnection(jdbcUrl,username,password);
+
+    public DAO() {
+
     }
 
+    public void connect() throws SQLException {
+        conn = DriverManager.getConnection(jdbcUrl,username,password);
+    }
 }
