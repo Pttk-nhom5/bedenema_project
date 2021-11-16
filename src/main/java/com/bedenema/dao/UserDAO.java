@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UserDAO extends DAO{
+public class UserDAO extends DAO {
     private String sql;
     private Statement st;
     private ResultSet rs;
@@ -21,26 +21,41 @@ public class UserDAO extends DAO{
         connect();
         User u = new User();
         st = conn.createStatement();
-        sql="select *from tblusers WHERE username='" + username + "' AND password='" +password+ "'";
+        sql = "select *from tblusers WHERE username='" + username + "' AND password='" + password + "'";
+
         rs = st.executeQuery(sql);
-        while (rs.next()){
-           u.setId(rs.getInt("id"));
-           u.setUsername((rs.getString("username")));
-           u.setPassword((rs.getString("password")));
-           if(rs.getInt("position")==1){
-               u.setPosition("Manager");
-           }else u.setPosition("Staff");
+
+        System.out.println(rs);
+
+        while (rs.next()) {
+            u.setId(rs.getInt("id"));
+            u.setUsername((rs.getString("username")));
+            u.setPassword((rs.getString("password")));
+            if (rs.getInt("position") == 1) {
+                u.setPosition("Manager");
+            } else u.setPosition("Staff");
         }
         conn.close();
         return u;
     }
 
-    public void newUser(){
+    public void newUser() {
 
     }
 
-    public void updateUser(int id){
+    public void updateUser(int id) {
 
+    }
+
+    public boolean login(String username, String password) throws SQLException {
+        connect();
+        st = conn.createStatement();
+        sql = "select *from tblusers WHERE username='" + username + "' AND password='" + password + "'";
+        rs = st.executeQuery(sql);
+        if (!rs.next()) {
+            return false;
+        }
+        return true;
     }
 
 
