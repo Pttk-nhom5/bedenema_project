@@ -8,9 +8,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class UserDAO extends DAO {
-    private String sql;
-    private Statement st;
-    private ResultSet rs;
 
     public UserDAO() throws SQLException {
         super();
@@ -47,16 +44,19 @@ public class UserDAO extends DAO {
 
     }
 
-    public boolean login(String username, String password) throws SQLException {
+    public boolean login(String username, String password) throws SQLException, ClassNotFoundException {
         connect();
         st = conn.createStatement();
         sql = "select *from tblusers WHERE username='" + username + "' AND password='" + password + "'";
         rs = st.executeQuery(sql);
+        conn.close();
+
         if (!rs.next()) {
             return false;
         }
         return true;
     }
+
 
 
 }

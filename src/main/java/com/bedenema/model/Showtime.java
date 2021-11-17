@@ -2,6 +2,7 @@ package com.bedenema.model;
 
 //import jdk.vm.ci.meta.Local;
 
+import java.sql.Time;
 import java.time.LocalDateTime;
 
 public class Showtime {
@@ -50,9 +51,9 @@ public class Showtime {
         return startTime;
     }
 
-    public void setStartTime(LocalDateTime startTime) {
-        this.startTime = startTime;
-    }
+//    public void setStartTime(Time startTime) {
+//        this.startTime = startTime;
+//    }
 
     public LocalDateTime getEndTime() {
         return endTime;

@@ -21,7 +21,12 @@
     if (username != null && password != null) {
         try {
             UserDAO userDAO = new UserDAO();
-            boolean isLogin = userDAO.login(username, password);
+            boolean isLogin = false;
+            try {
+                isLogin = userDAO.login(username, password);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
             out.println(isLogin);
             if (isLogin) {
                 HttpSession mySession = request.getSession();

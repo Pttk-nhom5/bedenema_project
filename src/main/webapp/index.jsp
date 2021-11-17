@@ -11,7 +11,7 @@
 
 <body>
 <a href="manager/ManagerHomePageFrm.jsp">Admin</a>
-<a href="staff/StaffHomePageFrm.jsp">Staff</a>
+<a href="staff/LoginFrm.jsp">Staff</a>
 <a href="client/ClientHomepageFrm.jsp">User</a>
 </body>
 
