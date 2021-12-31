@@ -1,8 +1,9 @@
 package com.bedenema.dao;
 
+import javax.servlet.http.HttpServlet;
 import java.sql.*;
 
-public class DAO<conn> {
+public class DAO<conn> extends HttpServlet {
     public String sql;
     public Statement st;
     public ResultSet rs;
